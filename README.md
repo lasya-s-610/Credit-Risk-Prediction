@@ -1,10 +1,34 @@
 # Credit-Risk-Prediction
 
-## 📌 Project Overview
-This project focuses on **credit risk prediction**, classifying loan applicants as **Good (1)** or **Bad (0)** using machine learning.  
-Beyond building predictive models, the project emphasizes business-aligned decision making through *threshold tuning, risk banding,* and lending *policy simulations*.
+This project develops and evaluates machine learning models to classify loan applicants as **Good (1)** or **Bad (0)** credit risks, with a strong focus on **business-aligned decision making** rather than just model accuracy.
+It demonstrates how credit risk models can be translated into lending policies through **threshold tuning**, **risk banding**, and **lending policy simulations**.
+The analysis is implemented in Jupyter notebook, written as a narrative workflow with short cells and inline commentary explaining each modeling choice, threshold decision, and business insight.
 
-The goal is not just high accuracy, but actionable insights that help financial institutions balance *risk* and *growth*.
+
+---
+
+## 🔎 Quick Snapshot
+
+| Aspect                        | Summary |
+|------------------------------|---------|
+| Problem                      | Predict whether an applicant is a good or bad credit risk. |
+| Dataset                      | German Credit Dataset (1,000 records, mixed numerical & categorical features). |
+| Algorithms                   | Logistic Regression, Decision Tree, Random Forest, XGBoost. |
+| Final Model                  | XGBoost with tuned decision threshold. |
+| Key Metrics (Test Set)       | 73% accuracy, 68% recall for Bad class, 85% precision for Good class. |
+| Business Layer               | Risk banding and lending policy simulation on test set. |
+
+---
+## 📌 Project Overview
+
+Financial institutions need to balance **risk** (avoiding defaults) and **growth** (approving more loans).  
+This project builds a credit risk model and then connects it to **practical decision frameworks** that a bank could use in production.
+
+Core objectives:
+- Build interpretable models to classify applicants as Good (1) or Bad (0).
+- Improve detection of bad-credit applicants using **threshold tuning**.
+- Segment applicants into **risk bands** (Low, Medium, High).
+- Simulate **lending policies** under different risk appetites.
 
 ---
 
@@ -15,11 +39,12 @@ The goal is not just high accuracy, but actionable insights that help financial 
   - `0` → Bad credit risk  
   - `1` → Good credit risk
 
-Due to the limited dataset size, the project focuses on robust methodology, interpretability, and decision frameworks rather than overfitting for marginal metric gains.
+Due to the limited dataset size, the project focus is on robust methodology, interpretability, and decision frameworks rather than overfitting for marginal metric gains.
 
 ---
 
 ## 🔍 Exploratory Data Analysis (EDA)
+
 Key analyses performed:
 - Descriptive statistics and value counts
 - Missing value handling (treated as a separate category where applicable)
@@ -61,7 +86,7 @@ Evaluation focused on:
 ---
 
 ## 🎯 Threshold Tuning
-Instead of relying on the default 0.5 threshold, custom threshold tuning** was applied to improve detection of **bad credit applicants**, which is critical in financial risk scenarios.
+Instead of relying on the default 0.5 threshold, custom threshold tuning was applied to improve detection of **bad credit applicants**, which is critical in financial risk scenarios.
 
 - Model probabilities were analyzed
 - Threshold adjusted to optimize *Bad-class recall*
@@ -136,8 +161,7 @@ The proportion of approved loan applications that are classified as *bad risk*, 
 ---
 
 ## 📌 Conclusion
-This project demonstrates a complete **credit risk modeling pipeline**, focusing on *interpretability, risk-aware modeling*, and *business decision frameworks* rather than just predictive performance.  
-It reflects real-world credit analytics practices used in financial institutions.
+Through interpretability-driven modeling, threshold optimization, and policy simulation, this project bridges the gap between data science and practical credit risk management. It reflects workflows used in modern financial analytics teams.
 
 ---
 
